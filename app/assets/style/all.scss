@@ -1,0 +1,13 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "./helpers/variables";
+// @import './mixins/mixins';
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+@import "./helpers/utilities";
+@import "./mixins/border";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "./mixins/grid";
+
+@import "./layout/layout";
+
+@import "./pages/index.scss";
