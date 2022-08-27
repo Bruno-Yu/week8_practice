@@ -41,6 +41,7 @@ $utilities: map-merge(
         print: true,
         property: display,
         class: d,
+        state: hover,
         values: inline inline-block block grid table table-row table-cell flex
           inline-flex none,
       ),
@@ -120,6 +121,7 @@ $utilities: map-merge(
         null: $border-width solid $border-color,
         0: 0,
         tag: 16px solid $primary,
+        hover-tag: 16px solid $black,
       ),
     ),
     "border-bottom": (
@@ -168,15 +170,20 @@ $utilities: map-merge(
         values: (
           8: 8%,
           25: 25%,
+          27: 27%,
           32: 32%,
+          35: 35%,
           50: 50%,
           60: 60%,
+          65: 65%,
+          73: 73%,
           75: 75%,
           100: 100%,
           auto: auto,
           logo-sm: 85px,
           logo-lg: 190px,
           16px: 16px,
+          64px: 64px,
           100px: 100px,
         ),
       ),
@@ -223,7 +230,11 @@ $utilities: map-merge(
         auto: auto,
         2px: 2px,
         16px: 16px,
+        64px: 64px,
+        91px: 91px,
         340px: 340px,
+        374px: 374px,
+        446px: 446px,
       ),
     ),
     "max-height": (
@@ -541,6 +552,7 @@ $utilities: map-merge(
         values: (
           monospace: var(--#{$variable-prefix}font-monospace),
           secondary: $font-family-secondary,
+          number: $font-family-number,
         ),
       ),
     "font-size": (
@@ -638,6 +650,7 @@ $utilities: map-merge(
         property: background-color,
         responsive: true,
         class: bg,
+        state: hover,
         values:
           map-merge(
             $theme-colors,
@@ -738,6 +751,14 @@ $utilities: map-merge(
           contain: contain,
         ),
       ),
+    "object-position": (
+      property: object-position,
+      responsive: true,
+      class: object-position,
+      values: (
+        top: center top,
+      ),
+    ),
     "writing-mode": (
       property: writing-mode,
       responsive: true,
@@ -746,6 +767,28 @@ $utilities: map-merge(
         h: horizontal-tb,
         vr: vertical-rl,
         vl: vertical-lr,
+      ),
+    ),
+    "z-index": (
+      property: z-index,
+      responsive: true,
+      class: z-index,
+      values: (
+        1: 1,
+        20: 20,
+        21: 21,
+      ),
+    ),
+    "opacity": (
+      property: opacity,
+      class: opacity,
+      state: hover,
+      values: (
+        0: 0,
+        25: 0.25,
+        50: 0.5,
+        75: 0.75,
+        100: 1,
       ),
     )
   ),

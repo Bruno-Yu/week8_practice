@@ -1,3 +1,4 @@
+@import "./fonts/fonts";
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "./helpers/variables";
 // @import './mixins/mixins';
@@ -8,6 +9,6 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 @import "./mixins/grid";
 
-@import "./layout/layout";
+// @import "./layout/layout";
 
 @import "./pages/index.scss";

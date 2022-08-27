@@ -1,5 +1,11 @@
-.index__h1 {
-  color: #00cc99;
-  font-size: 20px;
-  font-weight: 400;
+.cardInfo :hover {
+  .cardInfo__filter {
+    opacity: 0.5;
+  }
+  .cardInfo__filter__btn {
+    opacity: 1;
+  }
+  .cardInfo__filter__sm__btn {
+    opacity: 1;
+  }
 }
