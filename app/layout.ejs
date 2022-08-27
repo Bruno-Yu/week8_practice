@@ -8,27 +8,23 @@
     <title><%- title %></title>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" /> -->
     <script src="https://kit.fontawesome.com/8e92b9a9c3.js" crossorigin="anonymous"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Squada+One&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Squada+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style/all.css">
   </head>
 
   <body>
-<div class="bg-body  border-bottom border-black">
-  <nav class="navbar navbar-expand-lg bg-body" style="max-width:1296px; margin: 0 auto;">
+<header class="bg-body  border-bottom border-black">
+  <nav class="navbar navbar-expand-lg bg-body mw-1296 mx-auto">
       <div class="container p-lg-0">
-        <a class="navbar-brand py-lg-0" href="./index.html"><img class="navbar__logo" src="./assets/images/logo.svg" alt="logo"></a>
+        <a class="navbar-brand py-lg-0" href="./index.html"><img class="h-auto w-logo-sm w-lg-logo-lg" src="./assets/images/logo.svg" alt="logo"></a>
           <div class=" ms-auto border-start-lg border-lg-black py-lg-10 px-lg-12 d-flex justify-content-between">
-            <input id="search" class="d-none bg-body d-lg-block  border-0  " type="text" placeholder="搜尋作品名稱、藝術家名稱" style="min-width:288px"/>
+            <input id="search" class="d-none bg-body d-lg-block  border-0  minw-228" type="text" placeholder="搜尋作品名稱、藝術家名稱"/>
             <label for="search" class="nav-link  "> 
         <i class="fa-solid fa-magnifying-glass  text-black fs-5 align-middle"></i></label>
-            
           </div>
-    
         <button class="navbar-toggler text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        
     <i class="fa-solid fa-bars"></i>
         </button>
       </div>
@@ -46,15 +42,14 @@
           </li>
         </ul>
       </div>
-  
   </nav>
-</div>
+</header>
 
     <%- contents %>
 
-    <footer class="footer">
-      footer
-    </footer>
+  <footer class="border-top border-4 py-6 text-center">
+    <p class="font-secondary">© ART NFT. All Rights Reserved</p>
+  </footer>
 
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>

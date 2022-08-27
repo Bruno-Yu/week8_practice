@@ -109,6 +109,7 @@ $utilities: map-merge(
       values: (
         null: $border-width solid $border-color,
         0: 0,
+        tag: 16px solid $transparent
       ),
     ),
     "border-end": (
@@ -117,7 +118,8 @@ $utilities: map-merge(
       class: border-end,
       values: (
         null: $border-width solid $border-color,
-        0: 0,
+        0: 0, 
+        tag: 16px solid $primary
       ),
     ),
     "border-bottom": (
@@ -164,19 +166,36 @@ $utilities: map-merge(
         property: width,
         class: w,
         values: (
+          8: 8%,
           25: 25%,
+          32: 32%,
           50: 50%,
+          60: 60%,
           75: 75%,
           100: 100%,
-
           auto: auto,
+          logo-sm: 85px,
+          logo-lg: 190px,
+          16px: 16px,
+          100px: 100px,
+          
         ),
       ),
     "max-width": (
+      responsive: true,
       property: max-width,
       class: mw,
       values: (
         100: 100%,
+        1296: 1296px,
+      ),
+    ),
+    "min-width": (
+      responsive: true,
+      property: min-width,
+      class: minw,
+      values: (
+        228:228px
       ),
     ),
     "viewport-width": (
@@ -194,6 +213,7 @@ $utilities: map-merge(
       ),
     ),
     "height": (
+      responsive: true,
       property: height,
       class: h,
       values: (
@@ -203,6 +223,8 @@ $utilities: map-merge(
         100: 100%,
         auto: auto,
         2px: 2px,
+        16px: 16px,
+        340px: 340px
       ),
     ),
     "max-height": (
@@ -519,6 +541,7 @@ $utilities: map-merge(
         class: font,
         values: (
           monospace: var(--#{$variable-prefix}font-monospace),
+          secondary: $font-family-secondary
         ),
       ),
     "font-size": (
@@ -708,13 +731,27 @@ $utilities: map-merge(
     "object-fit":
       (
         property: object-fit,
+              responsive: true,
         class: object,
         values: (
           fill: fill,
           cover: cover,
           contain: contain,
         ),
-      )
+      ),
+      "writing-mode":
+      (
+        property: writing-mode,
+              responsive: true,
+        class: writing,
+        values: (
+          h:  horizontal-tb,
+          vr: vertical-rl,
+          vl: vertical-lr,
+        ),
+      ),
+
   ),
+  
   $utilities
 );
