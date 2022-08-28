@@ -130,6 +130,7 @@ $utilities: map-merge(
       values: (
         null: $border-width solid $border-color,
         0: 0,
+        4: 4px solid $border-color,
       ),
     ),
     "border-start": (
@@ -169,6 +170,7 @@ $utilities: map-merge(
         class: w,
         values: (
           8: 8%,
+          20: 20%,
           25: 25%,
           27: 27%,
           32: 32%,
@@ -232,8 +234,10 @@ $utilities: map-merge(
         16px: 16px,
         64px: 64px,
         91px: 91px,
+        232px: 232px,
         340px: 340px,
         374px: 374px,
+        439px: 439px,
         446px: 446px,
       ),
     ),
@@ -661,6 +665,34 @@ $utilities: map-merge(
             )
           ),
       ),
+    "background-position": (
+      property: background-position,
+      responsive: true,
+      class: bg-position,
+      values: (
+        top: top,
+        start: left,
+        end: right,
+        bottom: bottom,
+      ),
+    ),
+    "background-size": (
+      property: background-size,
+      responsive: true,
+      class: bg-size,
+      values: (
+        cover: cover,
+        contain: contain,
+      ),
+    ),
+    "background-repeat": (
+      property: background-repeat,
+      responsive: true,
+      class: bg-repeat,
+      values: (
+        norepeat: no-repeat,
+      ),
+    ),
     // scss-docs-end utils-bg-color
     "gradient":
       (

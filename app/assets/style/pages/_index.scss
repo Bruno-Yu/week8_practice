@@ -9,3 +9,20 @@
     opacity: 1;
   }
 }
+.artist {
+  --swiper-theme-color: var(--bs-primary);
+  --swiper-pagination-color: var(--swiper-theme-color);
+  --swiper-pagination-bullet-inactive-color: #000;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-opacity: 1;
+  .swiper-pagination-bullet-active {
+    --swiper-pagination-bullet-width: 1rem;
+  }
+  .swiper-pagination-bullet {
+    border-radius: 0%;
+  }
+
+  .swiper-intro--bg {
+    background: rgba(255, 255, 255, 0.7);
+  }
+}
