@@ -573,6 +573,7 @@ $utilities: map-merge(
     ),
     "font-weight": (
       property: font-weight,
+      responsive: true,
       class: fw,
       values: (
         light: $font-weight-light,
