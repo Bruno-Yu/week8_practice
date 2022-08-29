@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>藝術品系列-篩選</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" /> -->
+    <script src="https://kit.fontawesome.com/8e92b9a9c3.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Squada+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body class="container-fluid">
+<header class="bg-body  border-bottom border-black">
+  <nav class="navbar navbar-expand-lg bg-body mw-1296px mx-auto">
+      <div class="container-fluid p-lg-0">
+        <a class="navbar-brand py-lg-0" href="./index.html"><img class="h-auto w-logo-sm w-lg-logo-lg" src="./assets/images/logo.svg" alt="logo"></a>
+          <div class=" ms-auto border-start-lg border-lg-black py-lg-10 px-lg-12 d-flex justify-content-between">
+            <input id="search" class="d-none bg-body d-lg-block  border-0  minw-228" type="text" placeholder="搜尋作品名稱、藝術家名稱"/>
+            <label for="search" class="nav-link  "> 
+        <i class="fa-solid fa-magnifying-glass  text-black fs-5 align-middle"></i></label>
+          </div>
+        <button class="navbar-toggler text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse  bg-white  top-100 bg-lg-body" id="navbarSupportedContent">
+        <ul class="navbar-nav  mb-lg-0 text-center  px-3 pb-6 p-lg-0"  >
+          <li class="nav-item py-6 border-bottom border-black border-bottom-lg-0 py-lg-10 px-lg-12 border-start-lg border-lg-black ">
+            <a class="nav-link fs-6 fs-lg-7 fw-bold text-nowrap" aria-current="page" href="./filter.html">探索</a>
+          </li>
+          <li class="nav-item py-6 py-lg-10 px-lg-12 border-start-lg  border-lg-black">
+            <a class="nav-link fs-6 fs-lg-7 fw-bold text-nowrap" href="#">市值</a>
+          </li>
+          <li class="nav-item  py-lg-10 ps-lg-12 border-start-lg  border-lg-black">
+            <a class="btn btn-primary fs-6 text-white border border-black w-100 p-3 d-lg-none ">連結錢包</a>
+            <a class="nav-link fs-lg-4 fw-bold d-none d-lg-block" href="#"><i class="fa-solid fa-wallet"></i></a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+</header>
+
+    
+<main>
+  <section class="mw-1296px mx-auto pt-6 pt-lg-10 pb-12 pb-lg-20">
+    <div class="container-fluid d-lg-flex px-lg-0">
+      <div class="d-none d-lg-block w-lg-24">
+        <div class="accordion border border-black" id="accordionExample">
+          <div class="accordion-item p-6 border-bottom border-info">
+            <h2 class="accordion-header" id="Internet">
+              <button
+                class="accordion-button fw-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#InternetCollapse"
+                aria-expanded="true"
+                aria-controls="InternetCollapse"
+              >
+                網路
+              </button>
+            </h2>
+            <div
+              id="InternetCollapse"
+              class="accordion-collapse collapse show"
+              aria-labelledby="Internet"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body pt-4">
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    以太坊
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    BNB 智能鏈
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item p-6 border-bottom border-info">
+            <h2 class="accordion-header" id="Status">
+              <button
+                class="accordion-button fw-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#StatusCollapse"
+                aria-expanded="true"
+                aria-controls="StatusCollapse"
+              >
+                狀態
+              </button>
+            </h2>
+            <div
+              id="StatusCollapse"
+              class="accordion-collapse collapse show"
+              aria-labelledby="Status"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body pt-4">
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    僅展示
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    拍賣中
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item p-6 border-bottom border-info">
+            <h2 class="accordion-header" id="Price">
+              <button
+                class="accordion-button fw-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#PriceCollapse"
+                aria-expanded="true"
+                aria-controls="PriceCollapse"
+              >
+                價格
+              </button>
+            </h2>
+            <div
+              id="PriceCollapse"
+              class="accordion-collapse collapse show"
+              aria-labelledby="Price"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body pt-4">
+                <div class="row g-2">
+                  <div class="col">
+                    <select id="inputState" class="form-select border">
+                      <option selected>ETH</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control border"
+                      id="PriceStart"
+                    />
+                  </div>
+
+                  <div
+                    class="col-1 d-flex justify-content-center align-items-center"
+                  >
+                    <div class="h-1px bg-black w-100"></div>
+                  </div>
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control border"
+                      id="PriceEnd"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+           <div class="accordion-item p-6">
+             <h7 class="text-info fw-bold ">屬性</h7>
+           </div>
+          <div class="accordion-item p-6 border-bottom border-info">
+            
+            <h2 class="accordion-header" id="Breeds">
+              <button
+                class="accordion-button  fw-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#BreedsCollapse"
+                aria-expanded="true"
+                aria-controls="BreedsCollapse"
+              >
+           
+           品種
+              </button>
+            </h2>
+            <div
+              id="BreedsCollapse"
+              class="accordion-collapse collapse show"
+              aria-labelledby="Breeds"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body pt-4">
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    八哥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    虎皮鸚鵡
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    太平鳥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    畫眉鳥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item p-6 border-bottom border-info">
+            <h2 class="accordion-header" id="Quantity">
+              <button
+                class="accordion-button fw-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#QuantityCollapse"
+                aria-expanded="true"
+                aria-controls="QuantityCollapse"
+              >
+                鳥的數量
+              </button>
+            </h2>
+            <div
+              id="QuantityCollapse"
+              class="accordion-collapse collapse show"
+              aria-labelledby="Quantity"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body pt-4">
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    八哥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    虎皮鸚鵡
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    太平鳥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    畫眉鳥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item p-6 border-bottom border-info">
+            <h2 class="accordion-header" id="PlantsIncluded">
+              <button
+                class="accordion-button fw-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#PlantsIncludedCollapse"
+                aria-expanded="true"
+                aria-controls="PlantsIncludedCollapse"
+              >
+                是否有花草
+              </button>
+            </h2>
+            <div
+              id="PlantsIncludedCollapse"
+              class="accordion-collapse collapse show"
+              aria-labelledby="PlantsIncluded"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body pt-4">
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    八哥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    虎皮鸚鵡
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    太平鳥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    畫眉鳥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item p-6 border-bottom border-info">
+            <h2 class="accordion-header" id="Colors">
+              <button
+                class="accordion-button fw-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#ColorsCollapse"
+                aria-expanded="true"
+                aria-controls="ColorsCollapse"
+              >
+                鳥的顏色
+              </button>
+            </h2>
+            <div
+              id="ColorsCollapse"
+              class="accordion-collapse collapse show"
+              aria-labelledby="Colors"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body pt-4">
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    八哥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    虎皮鸚鵡
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    太平鳥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    畫眉鳥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ps-lg-6 w-lg-76 d-lg-flex flex-lg-column align-items-lg-end">
+        <button type="button" class="btn bg-black text-white py-2 text-center d-lg-none fixed-bottom start-30 end-30 bottom-5">篩選條件 2</button>
+        <div class="row g-4 align-items-lg-end">
+          <div class="col-12 col-lg-6">
+            <div class="d-flex align-items-center">
+              <img
+                class="d-block img-fluid w-32px h-32px object-cover rounded-circle me-4"
+                src="./assets/images/artist01.jpg"
+                alt="artist01"
+              />
+              <p class="mb-0">Michael</p>
+            </div>
+            <h3 class="mb-2 fw-bold">我家外面的鳥</h3>
+            <p>
+              家門前每天都有不同的小鳥，大多數的小鳥都有特殊能力，特殊能力是什麼我就不說了，希望大家能從作品感受到小鳥的快樂。
+            </p>
+          </div>
+          <div class="col-12 col-lg-6">
+            <ul class="list-unstyled border bg-white w-100 d-flex">
+              <li class="py-4 text-center w-25">
+                <p class="fs-8 fs-lg-7">項目</p>
+                <p class="fs-5 fs-lg-4 fw-bold mb-0">6.4k</p>
+              </li>
+              <li class="py-4 text-center border-start w-25 position-relative">
+                <div
+                  class="position-absolute h-50 w-1px bg-white top-25"
+                  style="left: -1px"
+                ></div>
+                <p class="fs-8 fs-lg-7">擁有者</p>
+                <p class="fs-5 fs-lg-4 fw-bold mb-0">2.5 k</p>
+              </li>
+              <li class="py-4 text-center border-start w-25 position-relative">
+                <div
+                  class="position-absolute h-50 w-1px bg-white top-25"
+                  style="left: -1px"
+                ></div>
+                <p class="fs-8 fs-lg-7">底價</p>
+                <p class="fs-5 fs-lg-4 fw-bold mb-0">
+                  <i class="fa-brands fa-ethereum me-1"></i>1.38 k
+                </p>
+              </li>
+              <li class="py-4 text-center border-start w-25 position-relative">
+                <div
+                  class="position-absolute h-50 w-1px bg-white top-25"
+                  style="left: -1px"
+                ></div>
+                <p class="fs-8 fs-lg-7">總額</p>
+                <p class="fs-5 fs-lg-4 fw-bold mb-0">總額</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="d-flex justify-content-end mt-10 mb-6 mb-lg-10">
+          <button type="button" class="btn border bg-white px-6 py-2">
+            最新上架<i class="fa-solid fa-sort ms-2"></i>
+          </button>
+        </div>
+        <div class="w-100">
+          <div class="row g-6" data-masonry='{"percentPosition": true }'>
+            <div class="col-6 col-lg-4">
+              <div class="border-bottom-lg">
+                <div class="p-2 p-lg-6 bg-white">
+                  <a href="#" class="artWork d-block position-relative">
+                    <img
+                      class="d-block img-fluid"
+                      src="./assets/images/art20.jpg"
+                      alt="art20"
+                    />
+                    <div
+                      class="position-absolute top-0 bottom-0 start-0 end-0 artWork__filter opacity-0 p-2 p-xl-4 z-index-21"
+                    >
+                      <div class="border border-white p-2 p-xl-4 h-100">
+                        <div class="position-relative h-100">
+                          <p class="text-white mb-4">
+                            3/14情人節外面剛好有兩隻鳥，也在過情人節
+                          </p>
+                          <p class="text-white d-none d-xl-block">
+                            <i class="fa-brands fa-ethereum me-2"></i>300
+                          </p>
+                          <div class="d-flex justify-content-end mt-auto">
+                            <div
+                              class="d-block btn bg-body border px-12 position-absolute bottom-0 end-0"
+                            >
+                              MORE
+                              <div
+                                class="position-absolute bottom-0 end-0 border-top-tag border-end-tag w-16px h-16px"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <p class="my-2 my-lg-4 fw-lg-bold">這兩隻也太像企鵝了吧</p>
+              </div>
+            </div>
+            <div class="col-6 col-lg-4">
+              <div class="border-bottom-lg">
+                <div class="p-2 p-lg-6 bg-white">
+                  <a href="#" class="artWork d-block position-relative">
+                    <img
+                      class="d-block img-fluid"
+                      src="./assets/images/art21.jpg"
+                      alt="art21"
+                    />
+                    <div
+                      class="position-absolute top-0 bottom-0 start-0 end-0 artWork__filter opacity-0 p-2 p-xl-4 z-index-21"
+                    >
+                      <div class="border border-white p-2 p-xl-4 h-100">
+                        <div class="position-relative h-100">
+                          <p class="text-white mb-4">
+                            3/14情人節外面剛好有兩隻鳥，也在過情人節
+                          </p>
+                          <p class="text-white d-none d-xl-block">
+                            <i class="fa-brands fa-ethereum me-2"></i>300
+                          </p>
+                          <div class="d-flex justify-content-end mt-auto">
+                            <div
+                              class="d-block btn bg-body border px-12 position-absolute bottom-0 end-0"
+                            >
+                              MORE
+                              <div
+                                class="position-absolute bottom-0 end-0 border-top-tag border-end-tag w-16px h-16px"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <p class="my-2 my-lg-4 fw-lg-bold">兩情相悅</p>
+              </div>
+            </div>
+            <div class="col-6 col-lg-4">
+              <div class="border-bottom-lg">
+                <div class="p-2 p-lg-6 bg-white">
+                  <a href="#" class="artWork d-block position-relative">
+                    <img
+                      class="d-block img-fluid"
+                      src="./assets/images/art22.jpg"
+                      alt="art22"
+                    />
+                    <div
+                      class="position-absolute top-0 bottom-0 start-0 end-0 artWork__filter opacity-0 p-2 p-xl-4 z-index-21"
+                    >
+                      <div class="border border-white p-2 p-xl-4 h-100">
+                        <div class="position-relative h-100">
+                          <p class="text-white mb-4">
+                            3/14情人節外面剛好有兩隻鳥，也在過情人節
+                          </p>
+                          <p class="text-white d-none d-xl-block">
+                            <i class="fa-brands fa-ethereum me-2"></i>300
+                          </p>
+                          <div class="d-flex justify-content-end mt-auto">
+                            <div
+                              class="d-block btn bg-body border px-12 position-absolute bottom-0 end-0"
+                            >
+                              MORE
+                              <div
+                                class="position-absolute bottom-0 end-0 border-top-tag border-end-tag w-16px h-16px"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <p class="my-2 my-lg-4 fw-lg-bold">群聚的小鳥們</p>
+              </div>
+            </div>
+            <div class="col-6 col-lg-4">
+              <div class="border-bottom-lg">
+                <div class="p-2 p-lg-6 bg-white">
+                  <a href="#" class="artWork d-block position-relative">
+                    <img
+                      class="d-block img-fluid"
+                      src="./assets/images/art23.jpg"
+                      alt="art23"
+                    />
+                    <div
+                      class="position-absolute top-0 bottom-0 start-0 end-0 artWork__filter opacity-0 p-2 p-xl-4 z-index-21"
+                    >
+                      <div class="border border-white p-2 p-xl-4 h-100">
+                        <div class="position-relative h-100">
+                          <p class="text-white mb-4">
+                            3/14情人節外面剛好有兩隻鳥，也在過情人節
+                          </p>
+                          <p class="text-white d-none d-xl-block">
+                            <i class="fa-brands fa-ethereum me-2"></i>300
+                          </p>
+                          <div class="d-flex justify-content-end mt-auto">
+                            <div
+                              class="d-block btn bg-body border px-12 position-absolute bottom-0 end-0"
+                            >
+                              MORE
+                              <div
+                                class="position-absolute bottom-0 end-0 border-top-tag border-end-tag w-16px h-16px"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <p class="my-2 my-lg-4 fw-lg-bold">
+                  與你分享的快樂勝過獨自擁有
+                </p>
+              </div>
+            </div>
+            <div class="col-6 col-lg-4">
+              <div class="border-bottom-lg">
+                <div class="p-2 p-lg-6 bg-white">
+                  <a href="#" class="artWork d-block position-relative">
+                    <img
+                      class="d-block img-fluid"
+                      src="./assets/images/art24.jpg"
+                      alt="art24"
+                    />
+                    <div
+                      class="position-absolute top-0 bottom-0 start-0 end-0 artWork__filter opacity-0 p-2 p-xl-4 z-index-21"
+                    >
+                      <div class="border border-white p-2 p-xl-4 h-100">
+                        <div class="position-relative h-100">
+                          <p class="text-white mb-4">
+                            3/14情人節外面剛好有兩隻鳥，也在過情人節
+                          </p>
+                          <p class="text-white d-none d-xl-block">
+                            <i class="fa-brands fa-ethereum me-2"></i>300
+                          </p>
+                          <div class="d-flex justify-content-end mt-auto">
+                            <div
+                              class="d-block btn bg-body border px-12 position-absolute bottom-0 end-0"
+                            >
+                              MORE
+                              <div
+                                class="position-absolute bottom-0 end-0 border-top-tag border-end-tag w-16px h-16px"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <p class="my-2 my-lg-4 fw-lg-bold">會唱metal的鳥</p>
+              </div>
+            </div>
+            <div class="col-6 col-lg-4">
+              <div class="border-bottom-lg">
+                <div class="p-2 p-lg-6 bg-white">
+                  <a href="#" class="artWork d-block position-relative">
+                    <img
+                      class="d-block img-fluid"
+                      src="./assets/images/art25.jpg"
+                      alt="art25"
+                    />
+                    <div
+                      class="position-absolute top-0 bottom-0 start-0 end-0 artWork__filter opacity-0 p-2 p-xl-4 z-index-21"
+                    >
+                      <div class="border border-white p-2 p-xl-4 h-100">
+                        <div class="position-relative h-100">
+                          <p class="text-white mb-4">
+                            3/14情人節外面剛好有兩隻鳥，也在過情人節
+                          </p>
+                          <p class="text-white d-none d-xl-block">
+                            <i class="fa-brands fa-ethereum me-2"></i>300
+                          </p>
+                          <div class="d-flex justify-content-end mt-auto">
+                            <div
+                              class="d-block btn bg-body border px-12 position-absolute bottom-0 end-0"
+                            >
+                              MORE
+                              <div
+                                class="position-absolute bottom-0 end-0 border-top-tag border-end-tag w-16px h-16px"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <p class="my-2 my-lg-4 fw-lg-bold">一大一小兩個恰恰好</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+  <footer class="border-top border-4 py-6 text-center">
+    <p class="font-secondary">© ART NFT. All Rights Reserved</p>
+  </footer>
+
+    <script src="./assets/js/vendors.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- <script src="https://masonry.desandro.com/masonry.pkgd.js"></script> -->
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+
+</html>
