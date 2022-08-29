@@ -294,7 +294,9 @@ $negative-spacers: if(
 // scss-docs-start position-map
 $position-values: (
   0: 0,
+  5: 5%,
   25: 25%,
+  30: 30%,
   50: 50%,
   75: 75%,
   100: 100%,
@@ -818,8 +820,8 @@ $form-check-input-focus-border: $input-focus-border-color !default;
 $form-check-input-focus-box-shadow: $input-btn-focus-box-shadow !default;
 
 $form-check-input-checked-color: $component-active-color !default;
-$form-check-input-checked-bg-color: $component-active-bg !default;
-$form-check-input-checked-border-color: $form-check-input-checked-bg-color !default;
+$form-check-input-checked-bg-color: $black; // $component-active-bg !default;
+$form-check-input-checked-border-color: $black; //$form-check-input-checked-bg-color !default;
 $form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>") !default;
 $form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
 
@@ -1183,11 +1185,11 @@ $card-group-margin: $grid-gutter-width * 0.5 !default;
 // Accordion
 
 // scss-docs-start accordion-variables
-$accordion-padding-y: 1rem !default;
-$accordion-padding-x: 1.25rem !default;
+$accordion-padding-y: 0rem; //1rem !default;
+$accordion-padding-x: 0rem; //1.25rem !default;
 $accordion-color: $body-color !default;
-$accordion-bg: $body-bg !default;
-$accordion-border-width: $border-width !default;
+$accordion-bg: $white !default;
+$accordion-border-width: 0; // $border-width !default;
 $accordion-border-color: rgba($black, 0.125) !default;
 $accordion-border-radius: $border-radius !default;
 $accordion-inner-border-radius: subtract(
@@ -1203,13 +1205,13 @@ $accordion-button-padding-x: $accordion-padding-x !default;
 $accordion-button-color: $accordion-color !default;
 $accordion-button-bg: $accordion-bg !default;
 $accordion-transition: $btn-transition, border-radius 0.15s ease !default;
-$accordion-button-active-bg: tint-color($component-active-bg, 90%) !default;
-$accordion-button-active-color: shade-color($primary, 10%) !default;
+$accordion-button-active-bg: $white !default; //tint-color($component-active-bg, 90%) !default;
+$accordion-button-active-color: $body-color; // shade-color($primary, 10%) !default;
 
-$accordion-button-focus-border-color: $input-focus-border-color !default;
-$accordion-button-focus-box-shadow: $btn-focus-box-shadow !default;
+$accordion-button-focus-border-color: 0; //$transparent; //$input-focus-border-color !default;
+$accordion-button-focus-box-shadow: none; // $btn-focus-box-shadow !default;
 
-$accordion-icon-width: 1.25rem !default;
+$accordion-icon-width: 0.75rem !default;
 $accordion-icon-color: $accordion-color !default;
 $accordion-icon-active-color: $accordion-button-active-color !default;
 $accordion-icon-transition: transform 0.2s ease-in-out !default;

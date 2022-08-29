@@ -21,9 +21,12 @@ $(function () {
     },
   });
   // 瀑布流
-  $(".grid").masonry({
-    // options...
-    itemSelector: ".grid-item",
-    columnWidth: 200,
-  });
+
+  //    $(".mansonry").imagesLoaded().progress( function() {
+  //      $(".mansonry").masonry({
+  //     // options...
+  //     itemSelector: ".grid-item",
+  //   });
+  //    $(".mansonry").masonry('layout');
+  // });
 });
