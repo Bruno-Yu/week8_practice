@@ -111,6 +111,7 @@ $utilities: map-merge(
         null: $border-width solid $border-color,
         0: 0,
         tag: 16px solid $transparent,
+        lg-tag: 32px solid $transparent,
       ),
     ),
     "border-end": (
@@ -122,6 +123,8 @@ $utilities: map-merge(
         0: 0,
         tag: 16px solid $primary,
         hover-tag: 16px solid $black,
+        lg-tag: 32px solid $primary,
+        lg-hover-tag: 32px solid $black,
       ),
     ),
     "border-bottom": (
@@ -190,6 +193,7 @@ $utilities: map-merge(
           1px: 1px,
           16px: 16px,
           32px: 32px,
+          48px: 48px,
           64px: 64px,
           100px: 100px,
         ),
@@ -239,6 +243,7 @@ $utilities: map-merge(
         2px: 2px,
         16px: 16px,
         32px: 32px,
+        48px: 48px,
         64px: 64px,
         91px: 91px,
         232px: 232px,
