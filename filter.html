@@ -32,14 +32,14 @@
       <div class="collapse navbar-collapse  bg-white  top-100 bg-lg-body" id="navbarSupportedContent">
         <ul class="navbar-nav  mb-lg-0 text-center  px-3 pb-6 p-lg-0"  >
           <li class="nav-item py-6 border-bottom border-black border-bottom-lg-0 py-lg-10 px-lg-12 border-start-lg border-lg-black ">
-            <a class="nav-link fs-6 fs-lg-7 fw-bold text-nowrap" aria-current="page" href="./filter.html">探索</a>
+            <a class="nav-link fs-6 fs-lg-7 fw-bold text-nowrap" aria-current="page" href="./discovery.html">探索</a>
           </li>
           <li class="nav-item py-6 py-lg-10 px-lg-12 border-start-lg  border-lg-black">
-            <a class="nav-link fs-6 fs-lg-7 fw-bold text-nowrap" href="#">市值</a>
+            <a class="nav-link fs-6 fs-lg-7 fw-bold text-nowrap" href="./marketValue.html">市值</a>
           </li>
           <li class="nav-item  py-lg-10 ps-lg-12 border-start-lg  border-lg-black">
-            <a class="btn btn-primary fs-6 text-white border border-black w-100 p-3 d-lg-none ">連結錢包</a>
-            <a class="nav-link fs-lg-4 fw-bold d-none d-lg-block" href="#"><i class="fa-solid fa-wallet"></i></a>
+            <a class="btn btn-primary fs-6 text-white border border-black w-100 p-3 d-lg-none " data-bs-toggle="modal" data-bs-target="#Wallet">連結錢包</a>
+            <a class="nav-link fs-lg-4 fw-bold d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#Wallet" href="#"><i class="fa-solid fa-wallet"></i></a>
           </li>
         </ul>
       </div>
@@ -201,22 +201,20 @@
               </div>
             </div>
           </div>
-           <div class="accordion-item p-6">
-             <h7 class="text-info fw-bold ">屬性</h7>
-           </div>
+          <div class="accordion-item p-6">
+            <h7 class="text-info fw-bold">屬性</h7>
+          </div>
           <div class="accordion-item p-6 border-bottom border-info">
-            
             <h2 class="accordion-header" id="Breeds">
               <button
-                class="accordion-button  fw-bold"
+                class="accordion-button fw-bold"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#BreedsCollapse"
                 aria-expanded="true"
                 aria-controls="BreedsCollapse"
               >
-           
-           品種
+                品種
               </button>
             </h2>
             <div
@@ -509,7 +507,14 @@
         </div>
       </div>
       <div class="ps-lg-6 w-lg-76 d-lg-flex flex-lg-column align-items-lg-end">
-        <button type="button" class="btn bg-black text-white py-2 text-center d-lg-none fixed-bottom start-30 end-30 bottom-5">篩選條件 2</button>
+        <button
+          type="button"
+          class="btn bg-black text-white py-2 text-center d-lg-none fixed-bottom start-30 end-30 bottom-5"
+          data-bs-toggle="modal"
+          data-bs-target="#filterModal"
+        >
+          篩選條件 2
+        </button>
         <div class="row g-4 align-items-lg-end">
           <div class="col-12 col-lg-6">
             <div class="d-flex align-items-center">
@@ -804,10 +809,541 @@
   </section>
 </main>
 
+<!-- modal -->
+<div
+  class="modal fade"
+  id="filterModal"
+  tabindex="-1"
+  aria-labelledby="filterModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-fullscreen-md-down modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header flex-column">
+        <h5
+          class="modal-title w-100 text-center position-relative"
+          id="filterModalLabel"
+        >
+          篩選條件<button
+            type="button"
+            class="btn-close ms-auto d-inline-block position-absolute end-0"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </h5>
+      </div>
+      <div class="modal-body p-0">
+        <div class="accordion border border-black" id="accordionExample">
+          <div class="accordion-item p-6 border-bottom border-info">
+            <h2 class="accordion-header" id="Internet">
+              <button
+                class="accordion-button fw-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#InternetCollapse"
+                aria-expanded="true"
+                aria-controls="InternetCollapse"
+              >
+                網路
+              </button>
+            </h2>
+            <div
+              id="InternetCollapse"
+              class="accordion-collapse collapse show"
+              aria-labelledby="Internet"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body pt-4">
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    以太坊
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    BNB 智能鏈
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item p-6 border-bottom border-info">
+            <h2 class="accordion-header" id="Status">
+              <button
+                class="accordion-button fw-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#StatusCollapse"
+                aria-expanded="true"
+                aria-controls="StatusCollapse"
+              >
+                狀態
+              </button>
+            </h2>
+            <div
+              id="StatusCollapse"
+              class="accordion-collapse collapse show"
+              aria-labelledby="Status"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body pt-4">
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    僅展示
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    拍賣中
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item p-6 border-bottom border-info">
+            <h2 class="accordion-header" id="Price">
+              <button
+                class="accordion-button fw-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#PriceCollapse"
+                aria-expanded="true"
+                aria-controls="PriceCollapse"
+              >
+                價格
+              </button>
+            </h2>
+            <div
+              id="PriceCollapse"
+              class="accordion-collapse collapse show"
+              aria-labelledby="Price"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body pt-4">
+                <div class="row g-2">
+                  <div class="col">
+                    <select id="inputState" class="form-select border">
+                      <option selected>ETH</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control border"
+                      id="PriceStart"
+                    />
+                  </div>
+
+                  <div
+                    class="col-1 d-flex justify-content-center align-items-center"
+                  >
+                    <div class="h-1px bg-black w-100"></div>
+                  </div>
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control border"
+                      id="PriceEnd"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item p-6">
+            <h7 class="text-info fw-bold">屬性</h7>
+          </div>
+          <div class="accordion-item p-6 border-bottom border-info">
+            <h2 class="accordion-header" id="Breeds">
+              <button
+                class="accordion-button fw-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#BreedsCollapse"
+                aria-expanded="true"
+                aria-controls="BreedsCollapse"
+              >
+                品種
+              </button>
+            </h2>
+            <div
+              id="BreedsCollapse"
+              class="accordion-collapse collapse show"
+              aria-labelledby="Breeds"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body pt-4">
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    八哥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    虎皮鸚鵡
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    太平鳥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    畫眉鳥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item p-6 border-bottom border-info">
+            <h2 class="accordion-header" id="Quantity">
+              <button
+                class="accordion-button fw-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#QuantityCollapse"
+                aria-expanded="true"
+                aria-controls="QuantityCollapse"
+              >
+                鳥的數量
+              </button>
+            </h2>
+            <div
+              id="QuantityCollapse"
+              class="accordion-collapse collapse show"
+              aria-labelledby="Quantity"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body pt-4">
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    八哥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    虎皮鸚鵡
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    太平鳥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    畫眉鳥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item p-6 border-bottom border-info">
+            <h2 class="accordion-header" id="PlantsIncluded">
+              <button
+                class="accordion-button fw-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#PlantsIncludedCollapse"
+                aria-expanded="true"
+                aria-controls="PlantsIncludedCollapse"
+              >
+                是否有花草
+              </button>
+            </h2>
+            <div
+              id="PlantsIncludedCollapse"
+              class="accordion-collapse collapse show"
+              aria-labelledby="PlantsIncluded"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body pt-4">
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    八哥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    虎皮鸚鵡
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    太平鳥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    畫眉鳥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item p-6 border-bottom border-info">
+            <h2 class="accordion-header" id="Colors">
+              <button
+                class="accordion-button fw-bold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#ColorsCollapse"
+                aria-expanded="true"
+                aria-controls="ColorsCollapse"
+              >
+                鳥的顏色
+              </button>
+            </h2>
+            <div
+              id="ColorsCollapse"
+              class="accordion-collapse collapse show"
+              aria-labelledby="Colors"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body pt-4">
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    八哥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    虎皮鸚鵡
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    太平鳥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+                <div
+                  class="form-check ps-0 border-0 d-flex justify-content-between"
+                >
+                  <label class="form-check-label" for="flexCheckDefault">
+                    畫眉鳥
+                  </label>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="modal-footer d-flex justify-content-center border-0 p-0 p-lg-4 pt-lg-0"
+      >
+        <a
+          class="d-block btn btn-primary fs-6 text-white border border-black w-100 p-3 w-lg-30 m-0"
+          >確認</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <footer class="border-top border-4 py-6 text-center">
     <p class="font-secondary">© ART NFT. All Rights Reserved</p>
   </footer>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="Wallet" tabindex="-1" aria-labelledby="WalletLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-header flex-column ">
+        <h5 class="modal-title w-100 text-center position-relative" id="WalletLabel">連結你的錢包 <button type="button" class="btn-close ms-auto d-inline-block position-absolute end-0" data-bs-dismiss="modal" aria-label="Close"></button></h5>
+      </div>
+      <div class="modal-body">
+        <ul class="list-unstyled w-100 row row-cols-1 row-cols-lg-2 g-2">
+          <li class="col ">
+            <button type="button" class="btn border w-100 text-start d-flex align-items-center"><img class="w-16px me-4 d-block" src="./assets/images/logo/connect01.png" alt="connect01" /><p class="mb-0">MetaMask</p> </button>
+          </li>
+          <li class="col ">
+            <button type="button" class="btn border w-100 text-start d-flex align-items-center"><img class="w-16px me-4 d-block" src="./assets/images/logo/connect02.png" alt="connect02" /><p class="mb-0">Coinbase Wallet</p> </button>
+          </li>
+            <li class="col ">
+            <button type="button" class="btn border w-100 text-start d-flex align-items-center"><img class="w-16px me-4 d-block" src="./assets/images/logo/connect03.png" alt="connect03" /><p class="mb-0">WalletConnect</p> </button>
+          </li>
+            <li class="col ">
+            <button type="button" class="btn border w-100 text-start d-flex align-items-center"><img class="w-16px me-4 d-block" src="./assets/images/logo/connect04.png" alt="connect04" /><p class="mb-0">Phantom</p> </button>
+          </li>  
+          <li class="col ">
+            <button type="button" class="btn border w-100 text-start d-flex align-items-center"><img class="w-16px me-4 d-block" src="./assets/images/logo/connect05.png" alt="connect05" /><p class="mb-0">Glow</p> </button>
+          </li>  
+          <li class="col ">
+            <button type="button" class="btn border w-100 text-start d-flex align-items-center"><img class="w-16px me-4 d-block" src="./assets/images/logo/connect06.png" alt="connect06" /><p class="mb-0">Fortmatic</p> </button>
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer d-flex justify-content-center border-0 p-0 p-lg-4 pt-lg-0">
+      <a class="d-block btn btn-primary fs-6 text-white border border-black w-100 p-3 w-lg-30 m-0" >連結錢包</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
     <script src="./assets/js/vendors.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
