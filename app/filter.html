@@ -7,7 +7,7 @@ engine: ejs
 <main>
   <section class="mw-1296px mx-auto pt-6 pt-lg-10 pb-12 pb-lg-20">
     <div class="container-fluid d-lg-flex px-lg-0">
-      <div class="d-none d-lg-block w-lg-24">
+      <div class="d-none d-lg-block w-lg-24 modal position-lg-static" id="filterModal">
         <div class="accordion border border-black" id="accordionExample">
           <div class="accordion-item p-6 border-bottom border-info">
             <h2 class="accordion-header" id="Internet">
@@ -466,7 +466,7 @@ engine: ejs
         </div>
       </div>
       <div class="ps-lg-6 w-lg-76 d-lg-flex flex-lg-column align-items-lg-end">
-        <button type="button" class="btn bg-black text-white py-2 text-center d-lg-none fixed-bottom start-30 end-30 bottom-5">篩選條件 2</button>
+        <button type="button" class="btn bg-black text-white py-2 text-center d-lg-none fixed-bottom start-30 end-30 bottom-5" data-bs-toggle="modal" data-bs-target="#filterModal">篩選條件 2</button>
         <div class="row g-4 align-items-lg-end">
           <div class="col-12 col-lg-6">
             <div class="d-flex align-items-center">
